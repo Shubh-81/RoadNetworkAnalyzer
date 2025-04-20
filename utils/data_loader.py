@@ -15,49 +15,17 @@ def load_california_network():
     Returns:
         networkx.Graph: The California road network as an undirected graph
     """
-    # URL for the California road network dataset
-    url = "https://snap.stanford.edu/data/roadNet-CA.txt.gz"
+        # Create a NetworkX graph
+    G = nx.Graph()
     
-    # Cache mechanism to avoid reloading the dataset
-    @st.cache_data
-    def fetch_network_data(url):
-        try:
-            # Download the dataset
-            st.write(f"Downloading dataset from {url}...")
-            response = requests.get(url)
-            response.raise_for_status()  # Raise an exception for HTTP errors
-            
-            # Create a NetworkX graph
-            G = nx.Graph()
-            
-            # Parse the data and add edges
-            content = response.content
-            with tempfile.NamedTemporaryFile() as temp_file:
-                temp_file.write(content)
-                temp_file.flush()
-                
-                # Read the data - skip comments (lines starting with #)
-                with open(temp_file.name, 'rb') as f:
-                    for line in f:
-                        line = line.decode('utf-8').strip()
-                        if line.startswith('#'):
-                            continue
-                        parts = line.split()
-                        if len(parts) >= 2:
-                            source = int(parts[0])
-                            target = int(parts[1])
-                            G.add_edge(source, target)
-            
-            return G
-            
-        except Exception as e:
-            # If there's an error, create a small sample network for demonstration
-            st.error(f"Error loading network: {str(e)}")
-            st.warning("Creating sample network for demonstration...")
-            return create_sample_network()
+    with open('roadNet-CA.txt', 'r') as f:
+        for line in f:
+            if line.startswith('#'):
+                continue
+            source, target = map(int, line.strip().split())
+            G.add_edge(source, target)
     
-    # Load the network data
-    return fetch_network_data(url)
+    return G
 
 def create_sample_network():
     """

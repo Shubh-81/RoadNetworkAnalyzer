@@ -77,12 +77,15 @@ with st.sidebar:
         
         if st.button("Select Region"):
             G = st.session_state.network
-            
+            if G == None:
+               st.error("Please load network first") 
+                
             if region_method == "High degree nodes":
                 # Get nodes with highest degrees
                 degrees = dict(G.degree())
                 top_nodes = sorted(degrees, key=degrees.get, reverse=True)[:sample_size]
                 subgraph = G.subgraph(top_nodes)
+                degrees = [d for _, d in subgraph.degree()]
             
             elif region_method == "Random sample":
                 # Get random nodes
