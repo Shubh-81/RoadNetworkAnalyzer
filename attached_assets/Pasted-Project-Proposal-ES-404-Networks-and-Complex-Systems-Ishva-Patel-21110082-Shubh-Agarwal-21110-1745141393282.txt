@@ -1,0 +1,62 @@
+Project Proposal
+ES 404 - Networks and Complex Systems
+Ishva Patel (21110082) Shubh Agarwal (21110205)
+February 21, 2025
+Abstract
+This proposal outlines a comprehensive study of the California road network, a large-scale transportation network sourced from the Stanford Large Network Dataset Collection. Our aim is to analyze urban
+traffic dynamics and infrastructure efficiency using network science techniques. The study will identify
+critical congestion points, optimize routing strategies, and provide insights into how urban planning
+decisions can enhance overall connectivity.
+Introduction
+Urban centers rely on efficient transportation systems to support economic growth and quality of life. With
+rapid urbanization, the complexity of road networks increases, leading to challenges such as traffic congestion
+and infrastructure strain. In this project, we focus on the road network of California, which comprises nearly
+two million intersections and close to three million road segments. By modeling this network as an undirected
+graph, where nodes represent intersections and edges represent road segments, we intend to uncover patterns
+and insights that can inform traffic management and urban planning.
+Network Details
+Type of Network
+The project investigates a transportation network. Specifically, we study a road network where:
+• Nodes: Represent intersections where two or more roads converge.
+• Edges: Denote road segments connecting these intersections.
+This network is modeled as undirected, reflecting the bidirectional nature of most road segments in the
+dataset.
+Expected Number of Nodes and Edges
+Based on the dataset:
+• Nodes: Approximately 1,965,206 intersections.
+• Edges: Approximately 2,766,607 road segments.
+Definition of Nodes and Edges
+• Nodes (Intersections): Each node is a point where roads meet. These serve as the fundamental
+units of our network, capturing the connectivity inherent in urban road systems.
+• Edges (Road Segments): Each edge connects two intersections, representing a physical road. The
+undirected nature of the edges assumes that, for analysis purposes, travel is possible in both directions
+along each road segment.
+1
+Source of Network Data
+The data for this project is sourced from the Stanford Large Network Dataset Collection. This repository is
+widely recognized for providing comprehensive and reliable datasets for network analysis, making it an ideal
+source for studying complex urban infrastructures.
+Motivation and Objectives
+Motivation
+The California road network presents a compelling case for analysis due to its scale and complexity. With
+extensive coverage of urban and suburban areas, this network provides a realistic scenario to study how traffic
+flows, how congestion develops, and how urban infrastructure can be optimized. The insights derived from
+this project could contribute significantly to designing smarter traffic management systems and improving
+urban planning strategies.
+Objectives
+The main objectives of the project are:
+1. Traffic Congestion Analysis: Identify key intersections and road segments that act as congestion
+hotspots.
+2. Routing Optimization: Develop and test algorithms to optimize routing, thereby reducing travel
+times and alleviating congestion.
+3. Infrastructure Efficiency: Evaluate how the current road network design impacts overall efficiency
+and identify areas for potential improvement.
+4. Urban Planning Insights: Provide recommendations for urban planners based on the network’s
+structural characteristics and traffic patterns.
+Conclusion
+In conclusion, this project aims to leverage network science to address real-world challenges in urban traffic
+management and infrastructure efficiency. By thoroughly analyzing the California road network, we expect
+to generate valuable insights that can aid in optimizing traffic flows and informing urban planning decisions.
+The methodologies and tools applied in this study will provide a robust framework for understanding and
+enhancing complex transportation networks.
+2
