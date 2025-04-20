@@ -4,4 +4,3 @@ __pycache__
 .red
 .config/matplotlib
 .ropeproject
-.streamlit
