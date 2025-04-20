@@ -1,0 +1,7 @@
+.replit
+__pycache__
+.vscode
+.red
+.config/matplotlib
+.ropeproject
+.streamlit
